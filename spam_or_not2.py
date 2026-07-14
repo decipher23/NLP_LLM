@@ -5,7 +5,7 @@ import sqlite3
 
 llm=ChatOpenAI(model="gpt-4o-mini")
 def data1(email,result,prob):
-    conn=sqlite3.connect(r"C:\Users\rawat\OneDrive\Desktop\6PM\project2\review_project.db")
+    conn=sqlite3.connect("review_project.db")
     cursor=conn.cursor()
     query="insert into Email(email,result,prob) values(?,?,?)"
     values=(email,result,prob)
