@@ -1,9 +1,8 @@
-streamlit==1.49.0
-langchain==0.3.27
-langchain-core==0.3.75
-langchain-openai==0.3.32
-openai==1.107.2
-pydantic==2.11.7
-pandas==2.3.2
-openpyxl==3.1.5
-python-dotenv==1.1.1
+streamlit
+langchain
+langchain-openai
+openai
+pydantic
+pandas
+openpyxl
+python-dotenv
