@@ -5,7 +5,7 @@ import sqlite3
 llm=ChatOpenAI(model="gpt-4o-mini")
 
 def data1(sentence,lang_detect,language,translated,prob):
-    conn=sqlite3.connect(r"C:\Users\rawat\OneDrive\Desktop\6PM\project2\review_project.db")
+    conn=sqlite3.connect("review_project.db")
     cursor=conn.cursor()
     query="insert into translation(sentence,lang_detect,translatedlang,translated,prob) values(?,?,?,?,?)"
     values=(sentence,lang_detect,language,translated,prob)
