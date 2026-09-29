@@ -2,7 +2,9 @@ from langchain_openai import ChatOpenAI
 from pydantic import BaseModel,Field
 from langchain_core.prompts import PromptTemplate
 import sqlite3
-llm=ChatOpenAI(model="gpt-4o-mini")
+from langchain_groq import ChatGroq
+
+llm=ChatGroq(model="openai/gpt-oss-120b")
 
 def data1(sentence,lang_detect,language,translated,prob):
     conn=sqlite3.connect("review_project.db")
