@@ -222,12 +222,12 @@ elif option == "📰 News Classification":
 elif option == "🌐 Machine Translation":
 
     st.header("🌐 Machine Translation")
+    
+    text=st.text_area("Enter Text and Wait for the Auto Detect of Language then PRESS Translate")
+    if text.strip():
+        result1=detect_language(text)
+        st.write(f"Auto detected language --> {result1.language}")
 
-    text = st.text_area("Enter Text")
-
-   
-    result = translate_text(text)   # Sirf detect kare
-    st.text(f"Detected Language:{result.lang_detect}")
     target = st.selectbox(
         "Translate To",
         [
